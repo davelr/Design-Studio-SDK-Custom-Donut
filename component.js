@@ -1,5 +1,4 @@
 sap.designstudio.sdk.Component.subclass("com.davelr.donut.Donut", function() {
-	// davelr@live.ca;
 
 	var that = this;
 
@@ -23,7 +22,7 @@ sap.designstudio.sdk.Component.subclass("com.davelr.donut.Donut", function() {
 		donut();
 	};
 
-	var varCurVal = null;
+	var varCurVal = 60;
 	this.numCurVal = function(value) {
 		if (value == undefined) {
 			return varCurVal;
@@ -32,25 +31,25 @@ sap.designstudio.sdk.Component.subclass("com.davelr.donut.Donut", function() {
 		return this;
 	};
 
-	var varDonutColor = null;
+	var varDonutColor = "#808080";
     this.donutColor = function(value) {
         if(value == undefined) {
-        	return donutColor;
+        	return varDonutColor;
         }
         varDonutColor = value;
         return this;
     };
 
-	var varGapColor = null;
+	var varGapColor = "#EEEEEE";
     this.gapColor = function(value) {
         if(value == undefined) {
-        	return gapColor;
+        	return varGapColor;
         }
         varGapColor = value;
         return this;
     };
 
-	var varPrevVal = null;
+	var varPrevVal = -1;
 	this.numPrevVal = function(value) {
 		if (value == undefined) {
 			return varPrevVal;
@@ -59,19 +58,19 @@ sap.designstudio.sdk.Component.subclass("com.davelr.donut.Donut", function() {
 		return this;
 	};
     
-	var varDirection = null;
+	var varDirection = "Up";
     this.direction = function(value) {
         if(value == undefined) {
-        	return direction;
+        	return varDirection;
         }
         varDirection = value;
         return this;
     };
 
-	var varArrowColor = null;
+	var varArrowColor = "#008000";
     this.arrowColor = function(value) {
         if(value == undefined) {
-        	return arrowColor;
+        	return varArrowColor;
         }
         varArrowColor = value;
         return this;
@@ -128,13 +127,13 @@ sap.designstudio.sdk.Component.subclass("com.davelr.donut.Donut", function() {
 		var varTextY = 5;
 		
 		ctx.fillStyle = "#000000";
-		ctx.font = /*"bold " + */ varScale * 48 + "px Arial";
+		ctx.font = /*"bold " + */ 48 * varScale + "px Arial";
 
 		ctx.rotate(-150 * DEG2RAD);
-		ctx.fillText(varCurVal, varScale * -18 * ((varCurVal + "").length), varScale * varTextY); 
+		ctx.fillText(varCurVal, -18 * varScale * ((varCurVal + "").length), varTextY * varScale); 
 		
-		ctx.font = "bold " + varScale * 24 + "px Arial";
-		ctx.fillText("%", varScale * 9 *((varCurVal + "").length), varScale * varTextY); 
+		ctx.font = "bold " + 30 * varScale + "px Arial";
+		ctx.fillText("%", 9 * varScale * ((varCurVal + "").length), varTextY * varScale); 
 		
 		ctx.rotate(150 * DEG2RAD);
 		
