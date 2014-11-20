@@ -14,18 +14,18 @@
 
         <jsInclude>res/js/component.js</jsInclude>
 
-		<property id="onclick" type="ScriptText" title="On Click" group="Events" />
-		<property id="onmouseover" type="ScriptText" title="On Mouse Over" group="Events" />
-		<property id="onmouseout" type="ScriptText" title="On Mouse Out" group="Events" />
+	<property id="onclick" type="ScriptText" title="On Click" group="Events" />
+	<property id="onmouseover" type="ScriptText" title="On Mouse Over" group="Events" />
+	<property id="onmouseout" type="ScriptText" title="On Mouse Out" group="Events" />
         <property id="numCurVal" type="int" title="Value" group="Display" />
         <property id="donutColor" type="Color" title="Donut Colour" group="Display" />
         <property id="gapColor" type="Color" title="Donut Gap Colour" group="Display" />
         <property id="numPrevVal" type="int" title="Previous Value" group="Display" />
         <property id="direction" type="String" title="Arrow Direction" group="Display">
 	        <possibleValue>Up</possibleValue>
-			<possibleValue>Down</possibleValue>
-			<possibleValue>Right</possibleValue>
-			<possibleValue>Left</possibleValue>
+		<possibleValue>Down</possibleValue>
+		<possibleValue>Right</possibleValue>
+		<possibleValue>Left</possibleValue>
         </property>
         <property id="arrowColor" type="Color" title="Arrow Colour" group="Display" />
             
